@@ -1,4 +1,4 @@
-import { HF } from './site'
+import { GH, HF } from './site'
 
 export type Stat = [string, string]
 
@@ -75,4 +75,105 @@ export const CHAPTERS: Chapter[] = [
     stats: [['Parameters', '40.8M'], ['Peak val AP', '0.358'], ['Speed', '32.5 FPS']],
     fig: 'One box per object, nothing to suppress'
   }
+]
+
+export type Item = {
+  name: string
+  href: string
+  text: string
+  tag: string
+  hf?: string
+  gh?: string
+  space?: string
+}
+
+export const MORE: Item[] = [
+  {
+    name: 'Qwen2.5-Coder-32B abliterated',
+    href: HF + 'TobiasLogic/Qwen2.5-Coder-32B-abliterated',
+    text: 'The refusal direction projected out of the weights. The 4-bit GGUF lands about 3 points behind the base on HumanEval and edges past it on MBPP.',
+    tag: 'Model',
+    hf: 'TobiasLogic/Qwen2.5-Coder-32B-abliterated'
+  },
+  {
+    name: 'aplotita',
+    href: GH + '/aplotita',
+    text: 'A terminal coding assistant with an animated TUI. It maps your codebase, runs tools and edits files, with whichever model you bring.',
+    tag: 'JavaScript',
+    gh: 'aplotita'
+  },
+  {
+    name: 'famulus',
+    href: GH + '/famulus',
+    text: 'A Minecraft agent that gathers materials and builds schematics on request.',
+    tag: 'Java',
+    gh: 'famulus'
+  },
+  {
+    name: 'SPFgraph',
+    href: GH + '/SPFgraph',
+    text: 'Run LLMs locally in your terminal, from GPT-2 .pt checkpoints to GGUF, with a live dashboard.',
+    tag: 'JavaScript',
+    gh: 'SPFgraph'
+  },
+  {
+    name: 'ZeroShot-124M',
+    href: GH + '/ZeroShot-124M',
+    text: 'From random weights to a chatbot in 30 hours on one RTX 5060 Ti, for $6.77.',
+    tag: 'Python',
+    gh: 'ZeroShot-124M'
+  },
+  {
+    name: 'ZeroShot-350M',
+    href: GH + '/ZeroShot-350M',
+    text: 'A 337M decoder trained from scratch. Pretraining, mid-training and SFT on one rented GPU for under $8.',
+    tag: 'Python',
+    gh: 'ZeroShot-350M'
+  },
+  {
+    name: 'Museko-125M',
+    href: HF + 'TobiasLogic/Museko-125M',
+    text: 'A 123M Llama-style model trained on FineWeb-Edu with a little synthetic arithmetic mixed in.',
+    tag: 'Model',
+    hf: 'TobiasLogic/Museko-125M'
+  },
+  {
+    name: 'Chess Arena',
+    href: HF + 'spaces/TobiasLogic/chess-arena-gpu',
+    text: 'Any chess model on the Hub, playing each other and you.',
+    tag: 'Space',
+    space: 'TobiasLogic/chess-arena-gpu'
+  },
+  {
+    name: 'webgl-volumetric-stress',
+    href: GH + '/webgl-volumetric-stress',
+    text: 'A raymarched Mandelbulb in raw WebGL and GLSL, all in a single HTML file.',
+    tag: 'HTML',
+    gh: 'webgl-volumetric-stress'
+  },
+  {
+    name: 'rustfetch',
+    href: GH + '/rustfetch',
+    text: 'A system info tool in Rust, in the spirit of neofetch.',
+    tag: 'Rust',
+    gh: 'rustfetch'
+  },
+  {
+    name: 'system-sweeper',
+    href: GH + '/system-sweeper',
+    text: 'A friendly cleanup tool in Rust, with a small pet companion.',
+    tag: 'Rust',
+    gh: 'system-sweeper'
+  }
+]
+
+export const EARLIER: { name: string; href: string }[] = [
+  { name: 'cagliostro-v1', href: HF + 'bench-labs/cagliostro-v1' },
+  { name: 'cagliostro-v2', href: HF + 'bench-labs/cagliostro-v2' },
+  { name: 'PixelModel v5', href: HF + 'bench-labs/PixelModel-v5' },
+  { name: 'PixelModel v4', href: HF + 'bench-labs/PixelModel-v4' },
+  { name: 'PixelModel v3', href: HF + 'bench-labs/PixelModel-v3' },
+  { name: 'TextModel-v1', href: HF + 'TobiasLogic/TextModel-v1' },
+  { name: 'GCTokenizer-v1', href: HF + 'bench-labs/GCTokenizer-v1' },
+  { name: 'ChessMamba v1', href: HF + 'TobiasLogic/chessmamba' }
 ]
